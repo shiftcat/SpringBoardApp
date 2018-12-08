@@ -1,6 +1,5 @@
 package com.example.android.attchedfile;
 
-import com.example.android.Constant;
 import com.example.android.attchedfile.vo.FileBytes;
 import com.example.android.attchedfile.vo.FileSearch;
 import com.example.android.models.AttachedFile;

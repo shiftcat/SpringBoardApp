@@ -1,6 +1,5 @@
 package com.example.android.thumbnail;
 
-import com.example.android.Constant;
 import com.example.android.attchedfile.FileService;
 import com.example.android.attchedfile.vo.FileBytes;
 import com.example.android.attchedfile.vo.FileSearch;
