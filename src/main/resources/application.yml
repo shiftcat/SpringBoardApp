@@ -27,11 +27,14 @@ spring:
             max-file-size: 5MB
             max-request-size: 5MB
     datasource:
+        type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:postgresql://${DATABASE_SERVER}:${DATABASE_PORT}/${DATABASE_USER}
         #platform: postgres
         driver-class-name: org.postgresql.Driver
         username: ${DATABASE_USER}
         password: ${DATABASE_PASSWD}
+        hikari:
+            auto-commit: false
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL9Dialect
         hibernate:
@@ -41,6 +44,8 @@ spring:
                 show_sql: true
                 format_sql: true
                 use_sql_comments: true
+                connection:
+                    provider_disables_autocommit: true
                 jdbc:
                     lob:
                         non_contextual_creation: true
